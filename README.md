@@ -5,7 +5,6 @@ This template is intended to support authors to create papers for SOSP 2016.
 ## Contents
 
 - gistt.cls document class for SOSP papers
-- gisttb.cls document class for SOSP papers using old style bibtex
 - sosp-template.tex the template file for your SOSP publication
 
 ## Usage
@@ -15,11 +14,21 @@ This template is intended to support authors to create papers for SOSP 2016.
 
 ## Bibliography
 
-The template and style use biblatex configured to use the bibtex backend.
-Therefore, you can use normal bibtex tooling for your bibliography.
-However, if biblatex is not support by your tech version, you can use
-gitsttb.cls
-Note: You have to change the document class in the sosp-template accordingly.
+The template and style use biblatex configured to use the biber backend.
+In case you do not have biber or want to use bibtex, you can change to
+old style bibtex. You can either use the bibtex backend of biblatex or
+entirly switch to bibtex. Please note you have to replace the
+\printbibliography with the appropriate bibtex commands.
+
+## Configuration
+
+The style supports three parameters for the document-class
+a) bibtex: if specified as optional parameter, the style will use bibtex
+	```\documentclass[bibtex]{gistt}```
+b) backend: This option supports either bibtex for the bibtex backend of biblatex or biber (the default)
+c) sorting: The default sorting is year,name,title. However, if you want to overwrite this setting you can use any sort order of biblatex.
+
+## Contact
 
 If you have questions or suggestions considering this template, please
 contact the author: reiner.jung@email.uni-kiel.de
