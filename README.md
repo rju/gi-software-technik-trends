@@ -23,10 +23,9 @@ entirly switch to bibtex. Please note you have to replace the
 ## Configuration
 
 The style supports three parameters for the document-class
-- bibtex: if specified as optional parameter, the style will use bibtex
-	```\documentclass[bibtex]{gistt}```
-- backend: This option supports either bibtex for the bibtex backend of biblatex or biber (the default)
-- sorting: The default sorting is year,name,title. However, if you want to overwrite this setting you can use any sort order of biblatex.
+- bibtex: if specified as optional parameter, the style will use bibtex ```\documentclass[bibtex]{gistt}```
+- backend: This option supports either bibtex for the bibtex backend of biblatex or biber (the default) ```\documentclass[backend=biber]{gistt}```
+- sorting: The default sorting is year,name,title. However, if you want to overwrite this setting you can use any sort order of biblatex. ```\documentclass[sorting=none]{gistt}```
 
 ## Contact
 
