@@ -2,15 +2,53 @@
 % LaTeX Style for GI Softwaretechnik Trends
 % (c) Reiner Jung
 %
-\ProvidesClass{gistt}[2016/07/26 Article Class GI]
+\ProvidesClass{gistt}[2016/08/12 Article Class GI]
 \NeedsTeXFormat{LaTeX2e}
 
 \LoadClass[twocolumn,a4paper,10pt]{article}
 
-\RequirePackage[backend=bibtex]{biblatex}
+\RequirePackage{xifthen}
+\RequirePackage{kvoptions}
+
+\DeclareBoolOption[false]{bibtex}
+\DeclareStringOption[biber]{backend}
+\DeclareStringOption[ynt]{sorting}
+
+\ProcessKeyvalOptions*
+
+\ifthenelse{\boolean{gistt@bibtex}}{%
+	\RequirePackage{bibtex}%
+}{%
+	\RequirePackage[backend=\gistt@backend,bibencoding=utf8,sortcites=true,style=numeric,sorting=\gistt@sorting]{biblatex}
+}
+
+
+
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{hyperref}
+
+\hypersetup{
+	%    bookmarks=true,         % show bookmarks bar?
+	unicode=true,          % non-Latin characters in Acrobat’s bookmarks
+	pdftoolbar=true,        % show Acrobat’s toolbar?
+	pdfmenubar=true,        % show Acrobat’s menu?
+	pdffitwindow=false,     % window fit to page when opened
+	pdfstartview={FitH},    % fits the width of the page to the window
+	pdftitle={},
+	pdfauthor={},
+	pdfnewwindow=true,      % links in new window
+	colorlinks=true,       % false: boxed links; true: colored links
+	linkcolor=black,          % color of internal links (change box color with linkbordercolor)
+	citecolor=black,        % color of links to bibliography
+	filecolor=black,      % color of file links
+	urlcolor=black           % color of external links
+}
 
 \makeatletter
+% hyperref setup
+\def\sectionautorefname{Section}
 
+%% page setup
 \def\@normalsize{\@setsize\normalsize{10pt}\xpt\@xpt
 \abovedisplayskip 10pt plus2pt minus5pt\belowdisplayskip \abovedisplayskip
 \abovedisplayshortskip \z@ plus3pt\belowdisplayshortskip 
@@ -74,4 +112,9 @@
 %\thispagestyle{empty}
 \let\ps@plain\ps@empty
 
+% deactivate date
+\let\@date%
+
 \makeatother
+
+% end
