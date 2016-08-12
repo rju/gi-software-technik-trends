@@ -23,10 +23,10 @@ entirly switch to bibtex. Please note you have to replace the
 ## Configuration
 
 The style supports three parameters for the document-class
-a) bibtex: if specified as optional parameter, the style will use bibtex
+- bibtex: if specified as optional parameter, the style will use bibtex
 	```\documentclass[bibtex]{gistt}```
-b) backend: This option supports either bibtex for the bibtex backend of biblatex or biber (the default)
-c) sorting: The default sorting is year,name,title. However, if you want to overwrite this setting you can use any sort order of biblatex.
+- backend: This option supports either bibtex for the bibtex backend of biblatex or biber (the default)
+- sorting: The default sorting is year,name,title. However, if you want to overwrite this setting you can use any sort order of biblatex.
 
 ## Contact
 
