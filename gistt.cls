@@ -19,7 +19,7 @@
 \ifthenelse{\boolean{gistt@bibtex}}{%
 	\RequirePackage{bibtex}%
 }{%
-	\RequirePackage[backend=\gistt@backend,bibencoding=utf8,doi_lse,isbn_lse,url_lse,firstinits=true,sortcites=true,style=numeric,sorting=\gistt@sorting]{biblatex}
+	\RequirePackage[backend=\gistt@backend,bibencoding=utf8,doi=false,isbn=false,url=false,giveninits=true,sortcites=true,style=numeric,sorting=\gistt@sorting]{biblatex}
 }
 
 
