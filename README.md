@@ -5,8 +5,8 @@ papers for the Symposium on Software Performance (SSP) 2016.
 
 ## Contents
 
-- gistt.cls document class for SOSP papers
-- sosp-template.tex the template file for your SOSP publication
+- gistt.cls document class for STT papers
+- stt-template.tex the template file for your STT publication
 
 ## Usage
 
