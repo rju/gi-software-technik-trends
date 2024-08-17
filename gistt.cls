@@ -9,6 +9,7 @@
 
 \RequirePackage{xifthen}
 \RequirePackage{kvoptions}
+\RequirePackage[utf8]{inputenc}
 
 \DeclareBoolOption[false]{bibtex}
 \DeclareStringOption[biber]{backend}
@@ -24,7 +25,6 @@
 
 
 
-\RequirePackage[utf8]{inputenc}
 \RequirePackage{hyperref}
 
 \hypersetup{
