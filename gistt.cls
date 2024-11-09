@@ -108,7 +108,7 @@
 \newcommand{\EI}{\end{itemize}}
 \raggedbottom
 
-%\pagestyle{empty}
+\pagestyle{empty}
 %\thispagestyle{empty}
 \let\ps@plain\ps@empty
 
