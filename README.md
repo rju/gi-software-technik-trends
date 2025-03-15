@@ -1,3 +1,7 @@
+# Note
+
+The LaTeX-Template moved to https://codeberg.org/prefec2/gi-software-technik-trends
+
 # Usage Instructions
 
 This template was originally intended to support authors to create
